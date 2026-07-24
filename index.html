@@ -8,22 +8,12 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	
-<!-- 1. O container onde o botão de tradução vai aparecer -->
-<div id="google_translate_element"></div>
-
-<!-- 2. O Script que inicializa o tradutor do Google -->
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'pt', // Idioma original do seu site (Português)
-      includedLanguages: 'en,es,fr,de,it', // Idiomas permitidos (opcional, remova para liberar todos)
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-</script>
-
-<!-- 3. Chamada da biblioteca externa do Google Translate -->
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<div style="display: flex; gap: 8px; align-items: center; font-family: sans-serif; font-size: 14px;">
+  <span>🌐 Traduzir:</span>
+  <a href="#" onclick="window.location.href='https://translate.google.com/translate?sl=pt&tl=en&u=' + encodeURIComponent(window.location.href); return false;" style="text-decoration: none; padding: 4px 8px; border: 1px solid #ccc; border-radius: 4px; color: #333; background: #f9f9f9;">English</a>
+  <a href="#" onclick="window.location.href='https://translate.google.com/translate?sl=pt&tl=es&u=' + encodeURIComponent(window.location.href); return false;" style="text-decoration: none; padding: 4px 8px; border: 1px solid #ccc; border-radius: 4px; color: #333; background: #f9f9f9;">Español</a>
+  <a href="#" onclick="window.location.href='https://translate.google.com/translate?sl=pt&tl=fr&u=' + encodeURIComponent(window.location.href); return false;" style="text-decoration: none; padding: 4px 8px; border: 1px solid #ccc; border-radius: 4px; color: #333; background: #f9f9f9;">Français</a>
+</div>
 	
 	</head>
 	<body class="landing is-preload">
