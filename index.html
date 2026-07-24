@@ -7,8 +7,30 @@
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	
+
+<!-- Container onde o widget será renderizado -->
+<div id="google_translate_element"></div>
+
+<!-- Script em JS puro para carregar e inicializar o widget -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'pt',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  (function() {
+    var gtScript = document.createElement('script');
+    gtScript.type = 'text/javascript';
+    gtScript.async = true;
+    gtScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gtScript, s);
+  })();
+</script>
 	</head>
+	
 	<body class="landing is-preload">
 
 		<!-- Page Wrapper -->
